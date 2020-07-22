@@ -1,0 +1,56 @@
+{
+  "name": "simpleblog",
+  "version": "1.0.0",
+  "description": "a Practice for typescript",
+  "main": "./dist/server.js",
+  "scripts": {
+    "start": "concurrently \"npm:build\" \"npm:production\"",
+    "dev": "concurrently \"npm:watch\" \"npm:development\"",
+    "build": "tsc --build tsconfig.json",
+    "watch": "tsc --build tsconfig.json --watch",
+    "production": "node -r dotenv/config ./dist/server",
+    "development": "nodemon -r dotenv/config ./dist/server",
+    "lint": "prettier-tslint check '**/*.ts'",
+    "lint:fix": "prettier-tslint fix '**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afikrim/simpleblog-ts.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "ts",
+    "node"
+  ],
+  "author": "Aziz Fikri <afikrim10@student.ub.ac.id>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afikrim/simpleblog-ts/issues"
+  },
+  "homepage": "https://github.com/afikrim/simpleblog-ts#readme",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.7",
+    "@types/helmet": "0.0.47",
+    "@types/mongoose": "^5.7.32",
+    "@types/morgan": "^1.9.1",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "prettier-tslint": "^0.4.2",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^3.9.7"
+  }
+}
