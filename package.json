@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/afikrim/simpleblog-ts#readme",
   "dependencies": {
+    "chalk": "^4.1.0",
     "concurrently": "^5.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -39,6 +40,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@types/chalk": "^2.2.0",
     "@types/cors": "^2.8.6",
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.7",

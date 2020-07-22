@@ -1,4 +1,5 @@
 import App from "./app";
+import Db from "./db";
 
 import cors from "cors";
 import helmet from "helmet";
@@ -6,9 +7,12 @@ import logger from "morgan";
 
 import routes from "./routes";
 
-import { PORT } from "./config/constants";
+import { PORT, DB_URL } from "./config/constants";
 
 const app = new App(PORT);
+const db = new Db(DB_URL);
+
+db.connect();
 
 app.addMiddlewares([
   logger(process.env.NODE_ENV === "production" ? "combined" : "dev"),
