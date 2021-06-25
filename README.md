@@ -1,1 +1,1 @@
-# simple-blog-ts
+# twitter clone typescript
